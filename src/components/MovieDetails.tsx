@@ -35,7 +35,7 @@ function MovieDetails({ imdbID }: MovieDetailsProps) {
 
       try {
         const response = await axios.get(
-          `http://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
+          `https://www.omdbapi.com/?i=${imdbID}&apikey=${apiKey}`
         );
         if (response.data.Response === 'True') {
           setMovie(response.data);
