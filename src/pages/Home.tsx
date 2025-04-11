@@ -47,7 +47,7 @@ function Home() {
 
     try {
       const response = await axios.get(
-        `http://www.omdbapi.com/?s=${encodeURIComponent(query)}&page=${page}&apikey=${apiKey}`
+        `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&page=${page}&apikey=${apiKey}`
       );
       if (response.data.Response === 'True') {
         setMovies(response.data.Search);
